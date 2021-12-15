@@ -1,321 +1,66 @@
-
 <!DOCTYPE html>
-<html lang='pt-BR'>
-<head>
-    <script src="https://use.fontawesome.com/0e2d62fd8a.js" async="async"></script>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-    <script>window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "NRJS-94f6a3bc56e2b1ef38c", "applicationID": "311632580", "transactionName": "JwxXTRcODw5SQ0wOWAkGFlALBQYa", "queueTime": 0, "applicationTime": 67, "agent": "" }</script>
-    <script>(window.NREUM || (NREUM = {})).init = { ajax: { deny_list: ["bam.nr-data.net"] } }; (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "NRJS-94f6a3bc56e2b1ef38c", applicationID: "311632580" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n, r) { return function () { return s.recordSupportability("API/" + e + "/called"), o(t + e, [u.now()].concat(c(arguments)), n ? null : this, r), n ? void 0 : this } } var o = t("handle"), a = t(10), c = t(11), f = t("ee").get("tracer"), u = t("loader"), s = t(4), d = NREUM; "undefined" == typeof window.newrelic && (newrelic = d); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", v = l + "ixn-"; a(p, function (t, e) { d[e] = i(l, e, !0, "api") }), d.addPageAction = i(l, "addPageAction", !0), d.setCurrentRouteName = i(l, "routeName", !0), e.exports = newrelic, d.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(v + "tracer", [u.now(), t, n], r), function () { if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw f.emit("fn-err", [arguments, this, t], n), t } finally { f.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(v, e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), s.recordSupportability("API/noticeError/called"), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { var r = !1; try { var i = Object.defineProperty({}, "passive", { get: function () { r = !0 } }); window.addEventListener("testPassive", null, i), window.removeEventListener("testPassive", null, i) } catch (o) { } e.exports = function (t) { return r ? { passive: !0, capture: !!t } : !!t } }, {}], 4: [function (t, e, n) { function r(t, e) { var n = [a, t, { name: t }, e]; return o("storeMetric", n, null, "api"), n } function i(t, e) { var n = [c, t, { name: t }, e]; return o("storeEventMetrics", n, null, "api"), n } var o = t("handle"), a = "sm", c = "cm"; e.exports = { constants: { SUPPORTABILITY_METRIC: a, CUSTOM_METRIC: c }, recordSupportability: r, recordCustom: i } }, {}], 5: [function (t, e, n) { function r() { return c.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, c = t(12); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 6: [function (t, e, n) { function r(t) { return !(!t || !t.protocol || "file:" === t.protocol) } e.exports = r }, {}], 7: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? p("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && p("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); if (n.length > 0) { var r = n[n.length - 1]; if (f && f < r.startTime) return; p("lcp", [r]) } } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || p("cls", [t]) }) } function a(t) { if (t instanceof g && !y) { var e = Math.round(t.timeStamp), n = { type: t.type }; e <= l.now() ? n.fid = l.now() - e : e > l.offset && e <= Date.now() ? (e -= l.offset, n.fid = l.now() - e) : e = l.now(), y = !0, p("timing", ["fi", e, n]) } } function c(t) { "hidden" === t && (f = l.now(), p("pageHide", [f])) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var f, u, s, d, p = t("handle"), l = t("loader"), v = t(9), m = t(3), g = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { u = new PerformanceObserver(r); try { u.observe({ entryTypes: ["paint"] }) } catch (h) { } s = new PerformanceObserver(i); try { s.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (h) { } d = new PerformanceObserver(o); try { d.observe({ type: "layout-shift", buffered: !0 }) } catch (h) { } } if ("addEventListener" in document) { var y = !1, w = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; w.forEach(function (t) { document.addEventListener(t, a, m(!1)) }) } v(c) } }, {}], 8: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var c = navigator.userAgent, f = c.match(a); f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 9: [function (t, e, n) { function r(t) { function e() { t(c && document[c] ? document[c] : document[o] ? "hidden" : "visible") } "addEventListener" in document && a && document.addEventListener(a, e, i(!1)) } var i = t(3); e.exports = r; var o, a, c; "undefined" != typeof document.hidden ? (o = "hidden", a = "visibilitychange", c = "visibilityState") : "undefined" != typeof document.msHidden ? (o = "msHidden", a = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (o = "webkitHidden", a = "webkitvisibilitychange", c = "webkitVisibilityState") }, {}], 10: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 11: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 12: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, f, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var c = e(i), f = m(n), u = f.length, s = 0; s < u; s++)f[s].apply(c, r); var p = d[w[n]]; return p && p.push([b, n, r, c]), c } } function o(t, e) { y[t] = m(t).concat(e) } function v(t, e) { var n = y[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function m(t) { return y[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function h(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var y = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: v, emit: n, get: g, listeners: m, context: e, buffer: h, abort: c, aborted: !1 }; return b } function o(t) { return u(t, f, a) } function a() { return new r } function c() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var f = "nr@context", u = t("gos"), s = t(10), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!T++) { var t = P.info = NREUM.info, e = g.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); f(O, function (e, n) { t[e] || (t[e] = n) }); var n = a(); c("mark", ["onload", n + P.offset], null, "api"), c("timing", ["load", n]); var r = g.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = v + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === g.readyState && o() } function o() { c("mark", ["domContent", a() + P.offset], null, "api") } var a = t(5), c = t("handle"), f = t(10), u = t("ee"), s = t(8), d = t(6), p = t(2), l = t(3), v = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, g = m.document, h = "addEventListener", y = "attachEvent", w = m.XMLHttpRequest, b = w && w.prototype, E = !d(m.location); NREUM.o = { ST: setTimeout, SI: m.setImmediate, CT: clearTimeout, XHR: w, REQ: m.Request, EV: m.Event, PR: m.Promise, MO: m.MutationObserver }; var x = "" + location, O = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1212.min.js" }, M = w && b && b[h] && !/CriOS/.test(navigator.userAgent), P = e.exports = { offset: a.getLastTimestamp(), now: a, origin: x, features: {}, xhrWrappable: M, userAgent: s, disabled: E }; if (!E) { t(1), t(7), g[h] ? (g[h]("DOMContentLoaded", o, l(!1)), m[h]("load", r, l(!1))) : (g[y]("onreadystatechange", i), m[y]("onload", r)), c("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var T = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, f, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, f], s], t) } c(n + "start", [o, a, f], s, u); try { return p = e.apply(a, o) } catch (v) { throw c(n + "err", [o, a, v], s, u), v } finally { c(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var c, f, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)f = e[u], c = t[f], a(c) || (t[f] = n(c, s ? f + r : r, i, f, o)) } function c(n, r, o, a) { if (!v || e) { var c = v; v = !0; try { t.emit(n, r, o, e, a) } catch (f) { i([f, n, r, o], t) } v = c } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function c(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function f(t, e, n) { var r = t[e]; t[e] = c(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(11), p = "nr@original", l = Object.prototype.hasOwnProperty, v = !1; e.exports = r, e.exports.wrapFunction = c, e.exports.wrapInPlace = f, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
-    <title>Página inicial - Ceará Transparente</title>
-    <meta content='Controladoria Geral do Estado do Ceará' name='author'>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <meta content='telephone=no' name='format-detection'>
-    <meta content='Hackathon Inteligência Cidadã' name='description'>
-    <meta content='http://cearatransparente.ce.gov.br/' property='og:url'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:site_name'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:title'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:description'>
-    <meta content='website' property='og:type'>
-    <meta content='pt_BR' property='og:locale'>
-    <meta content='https://cearatransparente.ce.gov.br/assets/logos/og-logo-ceara-39cbef21edb3deee1b49886375fe0c491bd0eeba8be58baef564ceb33f0685de.png' property='og:image'>
-    <meta content='2012003005780812' property='fb:app_id'>
-    <link href='https://cearatransparente.ce.gov.br/assets/favicon-f70d02acee8d29a06d97d8942244d88f122359f9387b0c7171c4294fce7c88a6.ico' rel='shortcut icon'>
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-flexdatalist/2.2.2/jquery.flexdatalist.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-
-    <link rel="stylesheet" media="all" href="https://cearatransparente.ce.gov.br/assets/application-28c2a02440511614d28b4ee0f6849c13c8cab43ae24fc1567bc22efc09af2f21.css" />
-
-    <link rel="stylesheet" media="screen" href="https://cearatransparente.ce.gov.br/assets/views/home/index-b4b3832f616e5546059008a4f33ff015242fa1846567fa4c44e37991fbbc8340.css" />
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="7a/zzlTC6DZu7J+uGBQ+cZwEcXijfT0YuNuFzaRStkw6CPbubk2WN3HgMlwidQEunEN5y/PLcVNbA5lfl8ugQw==" />
-
-</head>
-<body data-controller='home'>
-    <a class='sr-only' href='#content'>
-        Ir para o conteúdo
-    </a>
-
-
-    <ul class='navbar-nav navbar-mobile' data-mobile-menu=''>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item mb-3'>
-                    <a href="/?locale=pt-BR">
-                        <img src="https://cearatransparente.ce.gov.br/assets/logos/logo-ceara-header-invert-64f02548bffcbf30ace275c2e6fd167c52d57e78a1316b10afccf3d6fac385ca.png" alt="Ceará Transparente"></img>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li class='locales'>
-            <a class="active" href="/?locale=pt-BR">
-                <img src="https://cearatransparente.ce.gov.br/assets/flags/pt-BR-20c7d45dbe962dca7fbe07d922a66ed217ebf8df4eb09e5c8e3da836a31e32d5.png" alt="Português (Brasil)" class="locale-flag"></img>
-            </a><a class="" href="/?locale=en">
-                <img src="https://cearatransparente.ce.gov.br/assets/flags/en-e0e66e7fbf74a2cfa2dbffe82115d5118efad43195a8d69d412d8ea684e83554.png" alt="Inglês" class="locale-flag"></img>
-            </a><a class="" href="/?locale=es">
-                <img src="https://cearatransparente.ce.gov.br/assets/flags/es-27c4c2f993bdf4fa5417bad179e3f26ee36cdb7a14a1db484bc1eea4cf775b20.png" alt="Espanhol" class="locale-flag"></img>
-            </a>
-        </li>
-        <li class='nav-item'>
-            <span class='nav-link'>
-                Transparência
-            </span>
-        </li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia?locale=pt-BR">Acessar transparência</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia?locale=pt-BR#o-que-e">O que é Transparência</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia?locale=pt-BR#mapas-iterativos">Mapas Interativos</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia?locale=pt-BR#noticias">Notícias</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/iniciativas-da-sociedade?locale=pt-BR">Iniciativas da Sociedade</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/paginas/novidades-no-portal?locale=pt-BR">Novidades</a>
-                </li>
-            </ul>
-
-        </li>
-        <li class='nav-item mt-3'>
-            <span class='nav-link'>
-                Ouvidoria
-            </span>
-        </li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/ouvidoria?locale=pt-BR">Acessar Ouvidoria</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/sign_in?locale=pt-BR&amp;ticket_type=sou">Nova manifestação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/ticket/sign_in?locale=pt-BR">Acompanhar manifestação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/paginas/ouvidoria">O que é Ouvidoria</a>
-                </li>
-            </ul>
-
-        </li>
-        <li class='nav-item mt-3'>
-            <span class='nav-link'>
-                Acesso à Informação
-            </span>
-        </li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/acesso-a-informacao?locale=pt-BR">Acessar Acesso à Informação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/sign_in?locale=pt-BR&amp;ticket_type=sic">Nova solicitação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/ticket/sign_in?locale=pt-BR&amp;ticket_type=sic">Acompanhar solicitação</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/manifestacoes-e-solicitacoes-publicas?locale=pt-BR&amp;ticket_type=sic">Solicitações públicas</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/paginas/acesso-a-informacao">O que é Acesso à Informação</a>
-                </li>
-            </ul>
-
-        </li>
-        <li class='nav-item mt-3'>
-            <span class='nav-link'>
-                <a class="nav-link unique_menu_option" href="/ppa?locale=pt-BR">Participação Cidadã</a>
-            </span>
-        </li>
-        <li class='nav-item mt-3'>
-            <span class='nav-link'>
-                Serviços e Avaliações
-            </span>
-        </li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" target="_blank" href="https://cartadeservicos.ce.gov.br/">Carta de serviços</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/aplicativos?locale=pt-BR">Aplicativos oficiais</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/paginas/servicos-publicos">Serviços Eletrônicos</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/avaliacao-de-servicos?locale=pt-BR">Avaliação de Serviços</a>
-                </li>
-            </ul>
-
-        </li>
-        <li class='divisor'></li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/sign_up?locale=pt-BR">Criar perfil</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/sign_in?locale=pt-BR">Acessar perfil</a>
-                </li>
-            </ul>
-        </li>
-        <li class='divisor'></li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="http://www.ceara.gov.br/">Portal do governo</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="http://www.cge.ce.gov.br/">CGE</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/portal-da-transparencia/paginas/acessibilidade">Acessibilidade</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/?acessibility=true&amp;locale=pt-BR">Alto contraste</a>
-                </li>
-                <li class='nav-item'>
-                    <a class="nav-link d-inline-block pry-2 mr-3 btn-a11y-increase-font-size" href="javascript:;">A+</a>
-                    <a class="nav-link d-inline-block p-2 mr-3 btn-a11y-decrease-font-size" href="javascript:;">A-</a>
-                    <a class="nav-link d-inline-block p-2 btn-a11y-reset-font-size" href="javascript:;">A</a>
-                </li>
-            </ul>
-        </li>
-        <li class='divisor'></li>
-        <li>
-            <ul class='nav'>
-                <li class='nav-item'>
-                    <a class="nav-link" href="/search_contents?locale=pt-BR">Buscar na plataforma</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <div class='close' data-close-mobile-menu=''>
-        <div class='fa fa-times'></div>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CearaSimulator</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="company-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+        <div id="unity-progress-text" class="dark">0%</div>
+      </div>
     </div>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Versão.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Versão.data.unityweb",
+        frameworkUrl: buildUrl + "/Versão.framework.js.unityweb",
+        codeUrl: buildUrl + "/Versão.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "YMGames",
+        productName: "CearaSimulator",
+        productVersion: "0.1",
+      };
 
-    <div class='home-background'></div>
-    <div class='home-header'>
-        <div class='container'>
-            <nav class='navbar navbar-toggleable-md navbar-inverse top-bar'>
-                <button class='navbar-toggler-left navbar-toggler' data-menu='' type='button'>
-                    <span class='navbar-toggler-icon'></span>
-                </button>
-                <a accesskey='0' class='sr-only' href='#menu' id='menu'>
-                    Início do menu inicial
-                </a>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var progressText = document.querySelector("#unity-progress-text");
 
-                <ul class='hidden-md-down navbar-nav w-100'>
-                    <li class='nav-item'>
-                        <a class="nav-link" target="_blank" href="http://www.ceara.gov.br/">Portal do governo</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" target="_blank" href="http://www.cge.ce.gov.br/">CGE</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" target="_blank" href="/portal-da-transparencia/paginas/acessibilidade">Acessibilidade</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/?acessibility=true&amp;locale=pt-BR">Alto contraste</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link pr-0 border-right-0 btn-a11y-increase-font-size" href="javascript:;">A+</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link pr-0 border-right-0 btn-a11y-decrease-font-size" href="javascript:;">A-</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link btn-a11y-reset-font-size" href="javascript:;">A</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" target="_blank" href="/portal-da-transparencia/paginas/duvidas-frequentes">Dúvidas frequentes</a>
-                    </li>
-                    <li class='nav-item'>
-                        <div class='locales'>
-                            <a class="active" href="/?locale=pt-BR">
-                                <img src="https://cearatransparente.ce.gov.br/assets/flags/pt-BR-20c7d45dbe962dca7fbe07d922a66ed217ebf8df4eb09e5c8e3da836a31e32d5.png" alt="Português (Brasil)" class="locale-flag"></img>
-                            </a><a class="" href="/?locale=en">
-                                <img src="https://cearatransparente.ce.gov.br/assets/flags/en-e0e66e7fbf74a2cfa2dbffe82115d5118efad43195a8d69d412d8ea684e83554.png" alt="Inglês" class="locale-flag"></img>
-                            </a><a class="" href="/?locale=es">
-                                <img src="https://cearatransparente.ce.gov.br/assets/flags/es-27c4c2f993bdf4fa5417bad179e3f26ee36cdb7a14a1db484bc1eea4cf775b20.png" alt="Espanhol" class="locale-flag"></img>
-                            </a>
-                        </div>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/sign_up?locale=pt-BR">Criar perfil</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class="nav-link" href="/sign_in?locale=pt-BR">Acessar perfil</a>
-                    </li>
-                </ul>
-            </nav>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+      }
+      loadingBar.style.display = "block";
 
-            <a accesskey='1' class='sr-only' href='#content' id='content'>
-                Início do conteúdo
-            </a>
-
-            <section aria-labelledby='title' class='row text-white mt-lg-0 mb-lg-4'>
-                <div class='container'>
-                    <div class='row'>
-                        <div class='col-lg-8 col-12'>
-                            <div class='home-banner'>
-                                <div class='home-banner-image'>
-                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/logo-ceara-header-778a8726ea18a05fe5409fb74dd67bc1ed756bb02ed9da0e43fd9c45c0b6e52e.png" alt="Ceará Transparente" class="right-border"></img>
-                                </div>
-                                <div class='home-banner-image hidden-lg-down'>
-                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/badge-ceara-50e1e2588da166d7cf32ff51999422f1646136c04c7b2115e799c3a05344b22f.png" alt="Ceará Transparente"></img>
-                                </div>
-                                <div class='home-banner-title hidden-lg-down'>
-                                    <h2 class='font-weight-light' id='title'>
-                                        Controladoria e Ouvidoria <br>Geral do Estado
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col-12 col-lg-4'>
-                            <div class='search-box nav-search-container' data-search-box='home' data-search-value=''>
-                                <label class="font-weight-light" for="search">De qual informação você precisa?</label>
-                                <div class='input-group'>
-                                    <input class='form-control w-100 d-none d-lg-block ' placeholder='Busca' type='search'>
-                                    <div class='search-box-search' data-search-box-search=''>
-                                        <i class='fa fa-search fa-1-5x'></i>
-                                    </div>
-                                    <div class='search-box-cancel' data-search-box-cancel=''>
-                                        <i class='fa fa-times fa-1-5x'></i>
-                                    </div>
-                                </div>
-                                <div class='search-box-sections' data-search-box-sections=''>
-                                    <div class='search-box-section' data-search-box-section='search_content' data-title='Informações gerais' data-url='/global_searches?locale=pt-BR&amp;search_group=search_content'></div>
-                                    <div class='search-box-section' data-search-box-section='page' data-title='Páginas' data-url='/global_searches?locale=pt-BR&amp;search_group=page'></div>
-                                    <div class='search-box-section' data-search-box-section='server_salary' data-title='Servidores' data-url='/global_searches?locale=pt-BR&amp;search_group=server_salary'></div>
-                                    <div class='search-box-section' data-search-box-section='ned' data-title='Notas de empenho' data-url='/global_searches?locale=pt-BR&amp;search_group=ned'></div>
-                                    <div class='search-box-section' data-search-box-section='contract' data-title='Contratos' data-url='/global_searches?locale=pt-BR&amp;search_group=contract'></div>
-                                    <div class='search-box-section' data-search-box-section='convenant' data-title='Convênios' data-url='/global_searches?locale=pt-BR&amp;search_group=convenant'></div>
-                                    <div class='search-box-section' data-search-box-section='executive_ombudsman' data-title='Rede de ouvidorias' data-url='/global_searches?locale=pt-BR&amp;search_group=executive_ombudsman'></div>
-                                    <div class='search-box-section' data-search-box-section='public_ticket' data-title='Solicitações públicas' data-url='/global_searches?locale=pt-BR&amp;search_group=public_ticket'></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <!--<iframe src="https://i.simmer.io/@yuri_mhb/hackathon-inteligencia-cidada" style="width:960px;height:600px;border:0"></iframe>-->
-                <iframe frameborder="0" src="https://itch.io/embed-upload/4917589?color=333333" allowfullscreen="" width="960" height="620"><a href="https://yuri-mhb.itch.io/hackathon-inteligencia-cidada">Play Hackathon Inteligência Cidadã on itch.io</a></iframe>
-            </div>
-
-</body>
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          var displayProgress = (100 * (progress / 0.9));
+          if(displayProgress > 100) {
+            displayProgress = 100;
+          }
+          progressBarFull.style.width = displayProgress + "%";
+          progressText.innerHTML = Math.round(displayProgress) + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
 </html>

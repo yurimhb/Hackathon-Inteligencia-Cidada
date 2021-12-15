@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang='pt-BR'>
+<head>
     <script src="https://use.fontawesome.com/0e2d62fd8a.js" async="async"></script>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <script>window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "NRJS-94f6a3bc56e2b1ef38c", "applicationID": "311632580", "transactionName": "JwxXTRcODw5SQ0wOWAkGFlALBQYa", "queueTime": 0, "applicationTime": 67, "agent": "" }</script>
@@ -29,14 +30,10 @@
     <link rel="stylesheet" media="screen" href="https://cearatransparente.ce.gov.br/assets/views/home/index-b4b3832f616e5546059008a4f33ff015242fa1846567fa4c44e37991fbbc8340.css" />
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="7a/zzlTC6DZu7J+uGBQ+cZwEcXijfT0YuNuFzaRStkw6CPbubk2WN3HgMlwidQEunEN5y/PLcVNbA5lfl8ugQw==" />
-	
-	<link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-	
-  </head>
-  <body>
-   <a class='sr-only' href='#content'>
+
+</head>
+<body data-controller='home'>
+    <a class='sr-only' href='#content'>
         Ir para o conteúdo
     </a>
 
@@ -204,59 +201,121 @@
             </ul>
         </li>
     </ul>
-    
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="company-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-        <div id="unity-progress-text" class="dark">0%</div>
-      </div>
+    <div class='close' data-close-mobile-menu=''>
+        <div class='fa fa-times'></div>
     </div>
-    <script>
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Versão.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Versão.data.unityweb",
-        frameworkUrl: buildUrl + "/Versão.framework.js.unityweb",
-        codeUrl: buildUrl + "/Versão.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "YMGames",
-        productName: "CearaSimulator",
-        productVersion: "0.1",
-      };
 
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var progressText = document.querySelector("#unity-progress-text");
+    <div class='home-background'></div>
+    <div class='home-header'>
+        <div class='container'>
+            <nav class='navbar navbar-toggleable-md navbar-inverse top-bar'>
+                <button class='navbar-toggler-left navbar-toggler' data-menu='' type='button'>
+                    <span class='navbar-toggler-icon'></span>
+                </button>
+                <a accesskey='0' class='sr-only' href='#menu' id='menu'>
+                    Início do menu inicial
+                </a>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingBar.style.display = "block";
+                <ul class='hidden-md-down navbar-nav w-100'>
+                    <li class='nav-item'>
+                        <a class="nav-link" target="_blank" href="http://www.ceara.gov.br/">Portal do governo</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" target="_blank" href="http://www.cge.ce.gov.br/">CGE</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" target="_blank" href="/portal-da-transparencia/paginas/acessibilidade">Acessibilidade</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="/?acessibility=true&amp;locale=pt-BR">Alto contraste</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link pr-0 border-right-0 btn-a11y-increase-font-size" href="javascript:;">A+</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link pr-0 border-right-0 btn-a11y-decrease-font-size" href="javascript:;">A-</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link btn-a11y-reset-font-size" href="javascript:;">A</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" target="_blank" href="/portal-da-transparencia/paginas/duvidas-frequentes">Dúvidas frequentes</a>
+                    </li>
+                    <li class='nav-item'>
+                        <div class='locales'>
+                            <a class="active" href="/?locale=pt-BR">
+                                <img src="https://cearatransparente.ce.gov.br/assets/flags/pt-BR-20c7d45dbe962dca7fbe07d922a66ed217ebf8df4eb09e5c8e3da836a31e32d5.png" alt="Português (Brasil)" class="locale-flag"></img>
+                            </a><a class="" href="/?locale=en">
+                                <img src="https://cearatransparente.ce.gov.br/assets/flags/en-e0e66e7fbf74a2cfa2dbffe82115d5118efad43195a8d69d412d8ea684e83554.png" alt="Inglês" class="locale-flag"></img>
+                            </a><a class="" href="/?locale=es">
+                                <img src="https://cearatransparente.ce.gov.br/assets/flags/es-27c4c2f993bdf4fa5417bad179e3f26ee36cdb7a14a1db484bc1eea4cf775b20.png" alt="Espanhol" class="locale-flag"></img>
+                            </a>
+                        </div>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="/sign_up?locale=pt-BR">Criar perfil</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="/sign_in?locale=pt-BR">Acessar perfil</a>
+                    </li>
+                </ul>
+            </nav>
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          var displayProgress = (100 * (progress / 0.9));
-          if(displayProgress > 100) {
-            displayProgress = 100;
-          }
-          progressBarFull.style.width = displayProgress + "%";
-          progressText.innerHTML = Math.round(displayProgress) + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+            <a accesskey='1' class='sr-only' href='#content' id='content'>
+                Início do conteúdo
+            </a>
+
+            <section aria-labelledby='title' class='row text-white mt-lg-0 mb-lg-4'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-lg-8 col-12'>
+                            <div class='home-banner'>
+                                <div class='home-banner-image'>
+                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/logo-ceara-header-778a8726ea18a05fe5409fb74dd67bc1ed756bb02ed9da0e43fd9c45c0b6e52e.png" alt="Ceará Transparente" class="right-border"></img>
+                                </div>
+                                <div class='home-banner-image hidden-lg-down'>
+                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/badge-ceara-50e1e2588da166d7cf32ff51999422f1646136c04c7b2115e799c3a05344b22f.png" alt="Ceará Transparente"></img>
+                                </div>
+                                <div class='home-banner-title hidden-lg-down'>
+                                    <h2 class='font-weight-light' id='title'>
+                                        Controladoria e Ouvidoria <br>Geral do Estado
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-12 col-lg-4'>
+                            <div class='search-box nav-search-container' data-search-box='home' data-search-value=''>
+                                <label class="font-weight-light" for="search">De qual informação você precisa?</label>
+                                <div class='input-group'>
+                                    <input class='form-control w-100 d-none d-lg-block ' placeholder='Busca' type='search'>
+                                    <div class='search-box-search' data-search-box-search=''>
+                                        <i class='fa fa-search fa-1-5x'></i>
+                                    </div>
+                                    <div class='search-box-cancel' data-search-box-cancel=''>
+                                        <i class='fa fa-times fa-1-5x'></i>
+                                    </div>
+                                </div>
+                                <div class='search-box-sections' data-search-box-sections=''>
+                                    <div class='search-box-section' data-search-box-section='search_content' data-title='Informações gerais' data-url='/global_searches?locale=pt-BR&amp;search_group=search_content'></div>
+                                    <div class='search-box-section' data-search-box-section='page' data-title='Páginas' data-url='/global_searches?locale=pt-BR&amp;search_group=page'></div>
+                                    <div class='search-box-section' data-search-box-section='server_salary' data-title='Servidores' data-url='/global_searches?locale=pt-BR&amp;search_group=server_salary'></div>
+                                    <div class='search-box-section' data-search-box-section='ned' data-title='Notas de empenho' data-url='/global_searches?locale=pt-BR&amp;search_group=ned'></div>
+                                    <div class='search-box-section' data-search-box-section='contract' data-title='Contratos' data-url='/global_searches?locale=pt-BR&amp;search_group=contract'></div>
+                                    <div class='search-box-section' data-search-box-section='convenant' data-title='Convênios' data-url='/global_searches?locale=pt-BR&amp;search_group=convenant'></div>
+                                    <div class='search-box-section' data-search-box-section='executive_ombudsman' data-title='Rede de ouvidorias' data-url='/global_searches?locale=pt-BR&amp;search_group=executive_ombudsman'></div>
+                                    <div class='search-box-section' data-search-box-section='public_ticket' data-title='Solicitações públicas' data-url='/global_searches?locale=pt-BR&amp;search_group=public_ticket'></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <!--<iframe src="https://i.simmer.io/@yuri_mhb/hackathon-inteligencia-cidada" style="width:960px;height:600px;border:0"></iframe>-->
+                <iframe frameborder="0" src="Game.html" allowfullscreen="" width="960" height="620"></iframe>
+            </div>
+
+</body>
 </html>

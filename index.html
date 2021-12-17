@@ -151,13 +151,3 @@
 
 </body>
 </html>
-<script>
-$("button").click(function() {
-  const $iframe = $("#myiFrame");
-  const $but = $(this);
-  $iframe.on("load",function() {
-    $but.hide();
-  })
-  $iframe.attr("src", $iframe.data("src"));
-});
-</script>

@@ -1,75 +1,299 @@
 
 <!DOCTYPE html>
-<html lang='pt-BR'>
+<html lang="pt-BR" class="no-js">
 <head>
-    <script src="https://use.fontawesome.com/0e2d62fd8a.js" async="async"></script>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Página inicial - Ceará Transparente</title>
-    <meta content='Controladoria Geral do Estado do Ceará' name='author'>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <meta content='telephone=no' name='format-detection'>
-    <meta content='Hackathon Inteligência Cidadã' name='description'>
-    <meta content='http://cearatransparente.ce.gov.br/' property='og:url'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:site_name'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:title'>
-    <meta content='Hackathon Inteligência Cidadã' property='og:description'>
-    <meta content='website' property='og:type'>
-    <meta content='pt_BR' property='og:locale'>
-    <meta content='https://cearatransparente.ce.gov.br/assets/logos/og-logo-ceara-39cbef21edb3deee1b49886375fe0c491bd0eeba8be58baef564ceb33f0685de.png' property='og:image'>
-    <meta content='2012003005780812' property='fb:app_id'>
-    <link href='https://cearatransparente.ce.gov.br/assets/favicon-f70d02acee8d29a06d97d8942244d88f122359f9387b0c7171c4294fce7c88a6.ico' rel='shortcut icon'>
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-flexdatalist/2.2.2/jquery.flexdatalist.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-    <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <meta charset="UTF-8">
 
-    <link rel="stylesheet" media="all" href="https://cearatransparente.ce.gov.br/assets/application-28c2a02440511614d28b4ee0f6849c13c8cab43ae24fc1567bc22efc09af2f21.css" />
+    <title>hackathon - Controladoria e Ouvidoria Geral do Estado</title>
 
-    <link rel="stylesheet" media="screen" href="https://cearatransparente.ce.gov.br/assets/views/home/index-b4b3832f616e5546059008a4f33ff015242fa1846567fa4c44e37991fbbc8340.css" />
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="7a/zzlTC6DZu7J+uGBQ+cZwEcXijfT0YuNuFzaRStkw6CPbubk2WN3HgMlwidQEunEN5y/PLcVNbA5lfl8ugQw==" />
-	
-	<style>
-	
-		@media all and (min-width:960px) and (max-width: 1024px) {
-		  
-			button {
-			  position:absolute;
-			  top:0%;
-			  left:95%; /* perhaps use calc here */
-			  justify-content: center;
-			  z-index:999;
-			  background-color: transparent;
-			  border: none;
-			  text-align: center;
-			  text-decoration: none;
-			  display: inline-block;
-			  cursor: pointer;
-			}
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" href="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/favicon.ico" type="image/x-png" />
+
+        <link rel="shortcut icon" href="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/favicon.ico" type="image/x-icon">
+
+    
+<!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.cge.ce.gov.br/hackathon/" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="hackathon - Controladoria e Ouvidoria Geral do Estado" />
+<meta property="og:description" content="O que é? O Hackathon da Inteligência Cidadã é um concurso para criação de formas inovadoras de interpretar e visualizar os dados disponibilizados no Ceará Transparente, por meio de protótipos de soluções tecnológicas baseadas em interfaces digitais (softwares, sites, apps, chatbots etc), que traduzam e facilitem seu uso e acesso aberto. &nbsp; Objetivo O objetivo &hellip;" />
+<meta property="og:url" content="https://www.cge.ce.gov.br/hackathon/" />
+<meta property="og:site_name" content="Controladoria e Ouvidoria Geral do Estado" />
+<meta property="og:image" content="https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/11/imagem-hotsite.png" />
+<meta property="og:image:secure_url" content="https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/11/imagem-hotsite.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="O que é? O Hackathon da Inteligência Cidadã é um concurso para criação de formas inovadoras de interpretar e visualizar os dados disponibilizados no Ceará Transparente, por meio de protótipos de soluções tecnológicas baseadas em interfaces digitais (softwares, sites, apps, chatbots etc), que traduzam e facilitem seu uso e acesso aberto. &nbsp; Objetivo O objetivo [&hellip;]" />
+<meta name="twitter:title" content="hackathon - Controladoria e Ouvidoria Geral do Estado" />
+<meta name="twitter:image" content="https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/11/imagem-hotsite.png" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cge.ce.gov.br/#organization","name":"Controladoria e Ouvidoria Geral do Estado","url":"https://www.cge.ce.gov.br/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://www.cge.ce.gov.br/#logo","url":"https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2017/11/clara.png","width":559,"height":106,"caption":"Controladoria e Ouvidoria Geral do Estado"},"image":{"@id":"https://www.cge.ce.gov.br/#logo"}},{"@type":"WebSite","@id":"https://www.cge.ce.gov.br/#website","url":"https://www.cge.ce.gov.br/","name":"Controladoria e Ouvidoria Geral do Estado","publisher":{"@id":"https://www.cge.ce.gov.br/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.cge.ce.gov.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.cge.ce.gov.br/hackathon/#primaryimage","url":"https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/11/imagem-hotsite.png","width":1200,"height":328},{"@type":"WebPage","@id":"https://www.cge.ce.gov.br/hackathon/#webpage","url":"https://www.cge.ce.gov.br/hackathon/","inLanguage":"pt-BR","name":"hackathon - Controladoria e Ouvidoria Geral do Estado","isPartOf":{"@id":"https://www.cge.ce.gov.br/#website"},"primaryImageOfPage":{"@id":"https://www.cge.ce.gov.br/hackathon/#primaryimage"},"datePublished":"2021-10-27T17:22:30-03:00","dateModified":"2021-12-16T13:12:51-03:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Controladoria e Ouvidoria Geral do Estado &raquo;" href="https://www.cge.ce.gov.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Controladoria e Ouvidoria Geral do Estado &raquo;" href="https://www.cge.ce.gov.br/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/www.cge.ce.gov.br\/wp-includes\/js\/wp-emoji.js?ver=5.5.6","twemoji":"https:\/\/www.cge.ce.gov.br\/wp-includes\/js\/twemoji.js?ver=5.5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
 		}
-		
-		@media all and (min-width:300px) and (orientation:landscape) {
-		  button {
-			  position:absolute;
-			  top:00%;
-			  left:95%; /* perhaps use calc here */
-			  justify-content: center;
-			  z-index:999;
-			  background-color: transparent;
-			  border: none;
-			  text-align: center;
-			  text-decoration: none;
-			  display: inline-block;
-			  cursor: pointer;
-		  }
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
 		}
-		
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+
+	}
+} )( window, document, window._wpemojiSettings );
+
+
+
+
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+.modal .modal-dialog {
+  width: 1200px !important;
+  height: 650px !important;
+}
+
+
 		@media all and (min-height:300px) and (orientation:landscape) {
-		  button {
+		  .buttonMax {
 			  position:absolute;
 			  top:00%;
-			  left:92%; /* perhaps use calc here */
+			  left:77%; /* perhaps use calc here */
 			  justify-content: center;
 			  z-index:999;
 			  background-color: transparent;
@@ -79,13 +303,11 @@
 			  display: inline-block;
 			  cursor: pointer;
 		  }
-		}
-		
-		@media all and (min-width:0px) and (max-width: 600px) {
-		  button {
+		  
+		  .buttonFecha {
 			  position:absolute;
-			  top:0%;
-			  left:82%; /* perhaps use calc here */
+			  top:00%;
+			  left:18%; /* perhaps use calc here */
 			  justify-content: center;
 			  z-index:999;
 			  background-color: transparent;
@@ -96,7 +318,6 @@
 			  cursor: pointer;
 		  }
 		}
-		
 			
 		iframe-container {
 		  margin: 0 auto;
@@ -110,44 +331,424 @@
 		  display: flex;
 		  justify-content: center;
 		}
-	</style>
+	
 
-</head>
-<body data-controller='home'>
-    <div class='home-background'></div>
-    <div class='home-header'>
-        <div class='container'>
-            <a accesskey='1' class='sr-only' href='#content' id='content'>
-                Início do conteúdo
-            </a>
+</style>
+	<link rel='stylesheet' id='gtranslate-style-css'  href='https://www.cge.ce.gov.br/wp-content/plugins/gtranslate/gtranslate-style24.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.cge.ce.gov.br/wp-includes/css/dist/block-library/style.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='hamburguer-menu-effect-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/hamburguer-menu-effect.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.cge.ce.gov.br/wp-content/plugins/tablepress/css/default.css?ver=1.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.cge.ce.gov.br/wp-includes/css/dashicons.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='https://www.cge.ce.gov.br/wp-includes/js/thickbox/thickbox.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='keyboard_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/Keyboard-master/css/keyboard.css?1563284672&#038;ver=1563284672' type='text/css' media='all' />
+<link rel='stylesheet' id='modestgrid_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/lib/modestgrid.css?1619532334&#038;ver=1619532334' type='text/css' media='all' />
+<link rel='stylesheet' id='header_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/header.css?1619538863&#038;ver=1619538863' type='text/css' media='all' />
+<link rel='stylesheet' id='menumobile_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/menumobile.css?1563284650&#038;ver=1563284650' type='text/css' media='all' />
+<link rel='stylesheet' id='base_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/main.css?1636917943&#038;ver=1636917943' type='text/css' media='all' />
+<link rel='stylesheet' id='slick_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/lib/slick.css?1563285242&#038;ver=1563285242' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css?1564489867&#038;ver=1564489867' type='text/css' media='all' />
+<link rel='stylesheet' id='hover-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/hover/css/hover.min.css?1563285583&#038;ver=1563285583' type='text/css' media='all' />
+<link rel='stylesheet' id='cc-bootstrap-wrapper-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/cc-bootstrap/css/cc-bootstrap.min.css?1619537475&#038;ver=1619537475' type='text/css' media='all' />
+<link rel='stylesheet' id='custom_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/style.css?1628191257&#038;ver=1628191257' type='text/css' media='all' />
+<link rel='stylesheet' id='sitefilho_css-css'  href='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/css/sitefilho.css?1619534314&#038;ver=1619534314' type='text/css' media='all' />
+<link rel='stylesheet' id='ceara_select2_site_style-css'  href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css?ver=5.5.6' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://www.cge.ce.gov.br/wp-json/" /><link rel="alternate" type="application/json" href="https://www.cge.ce.gov.br/wp-json/wp/v2/pages/81847" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cge.ce.gov.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cge.ce.gov.br/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.cge.ce.gov.br/?p=81847' />
+<link rel="alternate" type="application/json+oembed" href="https://www.cge.ce.gov.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cge.ce.gov.br%2Fhackathon%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.cge.ce.gov.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cge.ce.gov.br%2Fhackathon%2F&#038;format=xml" />
 
-            <section aria-labelledby='title' class='row text-white mt-lg-0 mb-lg-4'>
-                <div class='container'>
-                    <div class='row'>
-                        <div class='col-lg-8 col-12'>
-                            <div class='home-banner'>
-                                <div class='home-banner-image'>
-                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/logo-ceara-header-778a8726ea18a05fe5409fb74dd67bc1ed756bb02ed9da0e43fd9c45c0b6e52e.png" alt="Ceará Transparente" class="right-border"></img>
+    </head>
+
+<body data-rsssl=1 class="page-template-default page page-id-81847 site-filho SinglePage" data-ajaxurl="https://www.cge.ce.gov.br/wp-admin/admin-ajax.php">
+        <main role="main" id="main">
+        <!-- No Script -->
+        <noscript>
+            <p>
+                Estimado usuário, identificamos que o seu navegador não conseguiu abrir todos os componentes necessários para o completo funcionamento do sistema. Recomentamos que atualize o seu navegador.
+            </p>
+        </noscript>
+
+        <div class="cc-bootstrap-wrapper">
+            <!-- Barra Corona Vírus -->
+            <div class="container-fluid" style="background: #ffbd00;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center py-2">
+                            <a class="hvr-grow small text-white" target="_blank" alt="CORONAVÍRUS-COVID-19" href="https://coronavirus.ceara.gov.br" title="coronavirus-covid-19"><strong>CORONAVÍRUS</strong>: Clique e saiba o que fazer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabeçalho -->
+                            <div class="d-none d-sm-none d-md-block">
+                    <header class="cc-header">
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="cc-topbar row d-flex align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="cc-related-sites-menu-container"><ul id="menu-superior" class="cc-related-sites-menu-list list-unstyled list-inline mb-0"><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom list-inline-item mr-0 menu-item-13"><a target="_blank" rel="noopener noreferrer" href="http://www.ceara.gov.br"><span>PORTAL DO GOVERNO</span></a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom list-inline-item mr-0 menu-item-14"><a target="_blank" rel="noopener noreferrer" href="http://intranet.cge.ce.gov.br/"><span>INTRANET</span></a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom list-inline-item mr-0 menu-item-15"><a target="_blank" rel="noopener noreferrer" href="http://webmail.cge.ce.gov.br"><span>WEBMAIL</span></a></li>
+</ul></div>                                    </div>
+                                    <div class="col d-flex justify-content-between mt-1">
+                                        <!-- GTranslate -->
+                                        <div>
+                                            <!-- GTranslate: https://gtranslate.io/ -->
+<a href="#" onclick="doGTranslate('pt|en');return false;" title="English" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/en.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('pt|fr');return false;" title="French" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/fr.png" height="24" width="24" alt="French" /></a><a href="#" onclick="doGTranslate('pt|pt');return false;" title="Portuguese" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/pt-br.png" height="24" width="24" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('pt|es');return false;" title="Spanish" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/es.png" height="24" width="24" alt="Spanish" /></a><style type="text/css">
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+.goog-text-highlight {background-color:transparent !important;box-shadow:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+</style>
+
+<div id="google_translate_element2"></div>
+<script type="text/javascript">
+function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'pt',autoDisplay: false}, 'google_translate_element2');}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+<script type="text/javascript">
+function GTranslateGetCurrentLang() {var keyValue = document['cookie'].match('(^|;) ?googtrans=([^;]*)(;|$)');return keyValue ? keyValue[2].split('/')[2] : null;}
+function GTranslateFireEvent(element,event){try{if(document.createEventObject){var evt=document.createEventObject();element.fireEvent('on'+event,evt)}else{var evt=document.createEvent('HTMLEvents');evt.initEvent(event,true,true);element.dispatchEvent(evt)}}catch(e){}}
+function doGTranslate(lang_pair){if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];if(GTranslateGetCurrentLang() == null && lang == lang_pair.split('|')[0])return;var teCombo;var sel=document.getElementsByTagName('select');for(var i=0;i<sel.length;i++)if(/goog-te-combo/.test(sel[i].className)){teCombo=sel[i];break;}if(document.getElementById('google_translate_element2')==null||document.getElementById('google_translate_element2').innerHTML.length==0||teCombo.length==0||teCombo.innerHTML.length==0){setTimeout(function(){doGTranslate(lang_pair)},500)}else{teCombo.value=lang;GTranslateFireEvent(teCombo,'change');GTranslateFireEvent(teCombo,'change')}}
+</script>
+                                        </div>
+
+                                        <div class="cc-related-sites-menu-container">
+                                            <ul id="menu-sites-relacionados-topo-header" class="cc-related-sites-menu-list list-unstyled list-inline mb-0">
+                                                <li class="list-inline-item mr-0"><a target="_blank" href="https://cearatransparente.ce.gov.br/portal-da-transparencia/ouvidoria?locale=pt-BR"><span>OUVIDORIA ESTADUAL</span></a></li>
+                                                <li class="list-inline-item mr-0"><a target="_blank" href="https://cearatransparente.ce.gov.br/"><span>CEARÁ TRANSPARENTE</span></a></li>
+                                                <li class="list-inline-item mr-0"><a href="/acesso-a-informacao"><span>ACESSO À INFORMAÇÃO</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class='home-banner-image hidden-lg-down'>
-                                    <img src="https://cearatransparente.ce.gov.br/assets/logos/badge-ceara-50e1e2588da166d7cf32ff51999422f1646136c04c7b2115e799c3a05344b22f.png" alt="Ceará Transparente"></img>
+                            </div>
+                        </div>
+                        <div class="container-fluid cc-bg-main-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col pt-3 pb-5">
+                                        <nav class="d-flex justify-content-between">
+                                            <a href="https://www.cge.ce.gov.br" class="d-block">
+                                                                                                    <img class="w-100 m-0 mt-2 cc-logo-internal" src="https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/05/Controladoria-e-Ouvidoria-Geral-do-Estado-INVERTIDA-WEB.svg" alt="Controladoria e Ouvidoria Geral do Estado- INVERTIDA &#8211; WEB">
+                                                                                            </a>
+                                            <div class="d-flex">
+                                                <form action="https://www.cge.ce.gov.br" method="get" class="cc-search cc-search-internal d-flex align-items-center mx-3">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm" name="s" placeholder="Do que você precisa?" aria-label="Ex: IPVA, Conta de Água, Hospitais, Notícias..." aria-describedby="button-search" value="">
+                                                        <button class="btn btn-outline-secondary" type="submit" id="button-search">
+                                                            <img src="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/images/busca-icon.png" alt="Ícone de busca">
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                                <div class="cc-main-menu cc-main-menu-internal d-flex align-items-center"><ul id="menu-principal" class="d-flex align-items-center list-unstyled list-inline mb-0"><li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-inline-item mr-0 menu-item-9"><a href="#">Institucional</a>
+<ul class="sub-menu list-unstyled list-inline">
+	<li id="menu-item-68076" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-68076"><a href="https://www.cge.ce.gov.br/institucional/">Sobre</a></li>
+	<li id="menu-item-73381" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-73381"><a href="https://www.cge.ce.gov.br/quem-e-quem/">Quem é Quem</a></li>
+	<li id="menu-item-67742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children list-inline-item mr-0 menu-item-67742"><a href="https://www.cge.ce.gov.br/coordenadorias/">Coordenadorias</a></li>
+	<li id="menu-item-4899" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-4899"><a href="https://www.cge.ce.gov.br/eventos-institucionais/">Eventos</a></li>
+	<li id="menu-item-68372" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-68372"><a href="https://www.cge.ce.gov.br/qualidade/">Qualidade</a></li>
+	<li id="menu-item-75916" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-75916"><a href="https://www.cge.ce.gov.br/ouvidoria-geral/">Ouvidoria Setorial</a></li>
+	<li id="menu-item-68700" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-68700"><a href="https://www.cge.ce.gov.br/comissao-setorial-de-etica-publica/">Comissão Setorial de Ética Pública</a></li>
+</ul>
+</li>
+<li id="menu-item-68217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-inline-item mr-0 menu-item-68217"><a href="#">Serviços</a>
+<ul class="sub-menu list-unstyled list-inline">
+	<li id="menu-item-69521" class="menu-item menu-item-type-custom menu-item-object-custom list-inline-item mr-0 menu-item-69521"><a href="https://cearatransparente.ce.gov.br/portal-da-transparencia/ouvidoria?locale=pt-BR">Ouvidoria</a></li>
+	<li id="menu-item-69520" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-69520"><a href="https://www.cge.ce.gov.br/acesso-a-informacao/">Acesso à Informação</a></li>
+	<li id="menu-item-69522" class="menu-item menu-item-type-custom menu-item-object-custom list-inline-item mr-0 menu-item-69522"><a href="http://transparencia.ce.gov.br/">Transparência</a></li>
+	<li id="menu-item-69874" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-69874"><a href="https://www.cge.ce.gov.br/e-parcerias/">e-Parcerias</a></li>
+	<li id="menu-item-69523" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-69523"><a href="https://www.cge.ce.gov.br/controle-interno-preventivo/orientacao-tecnica-e-normativa/">Assessoria Técnica</a></li>
+	<li id="menu-item-68890" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-68890"><a href="https://www.cge.ce.gov.br/legislacao/">Legislação</a></li>
+	<li id="menu-item-70909" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-70909"><a href="https://www.cge.ce.gov.br/outros-servicos/">Outros Serviços</a></li>
+</ul>
+</li>
+<li id="menu-item-5167" class="menu-item menu-item-type-post_type menu-item-object-page list-inline-item mr-0 menu-item-5167"><a href="https://www.cge.ce.gov.br/sistemas/">Sistemas</a></li>
+</ul></div>                                            </div>
+                                        </nav>
+                                    </div>
                                 </div>
-                                <div class='hidden-lg-down'>
-                                    <h2 class='font-weight-light' id='title'>
-                                        Controladoria e Ouvidoria <br>Geral do Estado
-                                    </h2>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            
+            <!-- Cabeçalho mobile -->
+            <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none cc-mobile-menu" style="overflow: hidden;">
+                <header class="cc-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-auto">
+                                <nav class="navbar navbar-dark" role="navigation">
+                                    <button class="navbar-toggler collapsed px-0 py-1 border-0" type="button" data-toggle="collapse" data-target="#menu-mobile" aria-controls="menu-mobile" aria-expanded="false" aria-label="Menu">
+                                        <span class="icon-bar top-bar"></span>
+                                        <span class="icon-bar middle-bar"></span>
+                                        <span class="icon-bar bottom-bar"></span>
+                                    </button>
+                                    <div id="menu-mobile" class="collapse navbar-collapse mt-3"><ul id="menu-principal-1" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-9 nav-item"><a title="Institucional" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-9">Institucional</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-9" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68076 nav-item"><a title="Sobre" href="https://www.cge.ce.gov.br/institucional/" class="dropdown-item">Sobre</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73381 nav-item"><a title="Quem é Quem" href="https://www.cge.ce.gov.br/quem-e-quem/" class="dropdown-item">Quem é Quem</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-67742 nav-item"><a title="Coordenadorias" href="https://www.cge.ce.gov.br/coordenadorias/" class="dropdown-item">Coordenadorias</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4899 nav-item"><a title="Eventos" href="https://www.cge.ce.gov.br/eventos-institucionais/" class="dropdown-item">Eventos</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68372 nav-item"><a title="Qualidade" href="https://www.cge.ce.gov.br/qualidade/" class="dropdown-item">Qualidade</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75916 nav-item"><a title="Ouvidoria Setorial" href="https://www.cge.ce.gov.br/ouvidoria-geral/" class="dropdown-item">Ouvidoria Setorial</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68700 nav-item"><a title="Comissão Setorial de Ética Pública" href="https://www.cge.ce.gov.br/comissao-setorial-de-etica-publica/" class="dropdown-item">Comissão Setorial de Ética Pública</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-68217 nav-item"><a title="Serviços" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-68217">Serviços</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-68217" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69521 nav-item"><a title="Ouvidoria" href="https://cearatransparente.ce.gov.br/portal-da-transparencia/ouvidoria?locale=pt-BR" class="dropdown-item">Ouvidoria</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69520 nav-item"><a title="Acesso à Informação" href="https://www.cge.ce.gov.br/acesso-a-informacao/" class="dropdown-item">Acesso à Informação</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69522 nav-item"><a title="Transparência" href="http://transparencia.ce.gov.br/" class="dropdown-item">Transparência</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69874 nav-item"><a title="e-Parcerias" href="https://www.cge.ce.gov.br/e-parcerias/" class="dropdown-item">e-Parcerias</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69523 nav-item"><a title="Assessoria Técnica" href="https://www.cge.ce.gov.br/controle-interno-preventivo/orientacao-tecnica-e-normativa/" class="dropdown-item">Assessoria Técnica</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68890 nav-item"><a title="Legislação" href="https://www.cge.ce.gov.br/legislacao/" class="dropdown-item">Legislação</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70909 nav-item"><a title="Outros Serviços" href="https://www.cge.ce.gov.br/outros-servicos/" class="dropdown-item">Outros Serviços</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5167 nav-item"><a title="Sistemas" href="https://www.cge.ce.gov.br/sistemas/" class="nav-link">Sistemas</a></li>
+</ul></div><div id="menu-mobile" class="collapse navbar-collapse"><ul id="menu-superior-1" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 nav-item"><a title="PORTAL DO GOVERNO" target="_blank" href="http://www.ceara.gov.br" class="nav-link">PORTAL DO GOVERNO</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 nav-item"><a title="INTRANET" target="_blank" href="http://intranet.cge.ce.gov.br/" class="nav-link">INTRANET</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 nav-item"><a title="WEBMAIL" target="_blank" href="http://webmail.cge.ce.gov.br" class="nav-link">WEBMAIL</a></li>
+</ul></div>                                </nav>
+                            </div>
+
+                            <div class="col d-flex align-items-center justify-content-end">
+                                    <!-- GTranslate -->
+                                    <!-- GTranslate: https://gtranslate.io/ -->
+<a href="#" onclick="doGTranslate('pt|en');return false;" title="English" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/en.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('pt|fr');return false;" title="French" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/fr.png" height="24" width="24" alt="French" /></a><a href="#" onclick="doGTranslate('pt|pt');return false;" title="Portuguese" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/pt-br.png" height="24" width="24" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('pt|es');return false;" title="Spanish" class="glink nturl notranslate"><img src="//www.cge.ce.gov.br/wp-content/plugins/gtranslate/flags/24/es.png" height="24" width="24" alt="Spanish" /></a><style type="text/css">
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+.goog-text-highlight {background-color:transparent !important;box-shadow:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+</style>
+
+<div id="google_translate_element2"></div>
+<script type="text/javascript">
+function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'pt',autoDisplay: false}, 'google_translate_element2');}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+<script type="text/javascript">
+function GTranslateGetCurrentLang() {var keyValue = document['cookie'].match('(^|;) ?googtrans=([^;]*)(;|$)');return keyValue ? keyValue[2].split('/')[2] : null;}
+function GTranslateFireEvent(element,event){try{if(document.createEventObject){var evt=document.createEventObject();element.fireEvent('on'+event,evt)}else{var evt=document.createEvent('HTMLEvents');evt.initEvent(event,true,true);element.dispatchEvent(evt)}}catch(e){}}
+function doGTranslate(lang_pair){if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];if(GTranslateGetCurrentLang() == null && lang == lang_pair.split('|')[0])return;var teCombo;var sel=document.getElementsByTagName('select');for(var i=0;i<sel.length;i++)if(/goog-te-combo/.test(sel[i].className)){teCombo=sel[i];break;}if(document.getElementById('google_translate_element2')==null||document.getElementById('google_translate_element2').innerHTML.length==0||teCombo.length==0||teCombo.innerHTML.length==0){setTimeout(function(){doGTranslate(lang_pair)},500)}else{teCombo.value=lang;GTranslateFireEvent(teCombo,'change');GTranslateFireEvent(teCombo,'change')}}
+</script>
+  
+
+                                    <!-- Acessibilidade -->
+                                    <ul class="menu-accessibility d-flex m-0 p-0">
+                                        <li class="menu-accessibility__item">       
+                                            <a href="#" class="menu-accessibility__link menu-accessibility__link--normal" title="Fonte tamanho normal">
+                                                <img src="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/images/font-normal-02.svg" alt="Fonte tamanho normal" class="menu-accessibility__img" width="24" height="24">
+                                            </a>
+                                        </li>
+                                        <li class="menu-accessibility__item">
+                                            <a href="#" class="menu-accessibility__link menu-accessibility__link--decrease" title="Diminuir a fonte">
+                                                <img src="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/images/font-less-02.svg" alt="Dominuir a fonte" class="menu-accessibility__img" width="24" height="24">
+                                            </a>
+                                        </li>
+                                        <li class="menu-accessibility__item">
+                                            <a href="#" class="menu-accessibility__link menu-accessibility__link--increase" title="Aumentar a fonte">
+                                                <img src="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/images/font-plus-02.svg" alt="Aumentar a fonte" class="menu-accessibility__img" width="24" height="24">
+                                            </a>
+                                        </li>
+                                        <li class="menu-accessibility__item">
+                                            <a href="#" class="menu-accessibility__link menu-accessibility__link--contraste" title="Contraste da tela">
+                                                <img src="https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/images/icon-contraste-02.svg" alt="Contraste da tela" class="menu-accessibility__img" width="24" height="24">
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="container">
+                            <div class="row">
+                                <!-- Logotipo institucional do Governo do Estado do Ceará -->
+                                <div class="col p-0">
+                                    <div class="p-1">
+                                        <a href="https://www.cge.ce.gov.br" class="d-block w-100">
+                                                                                            <img class="w-100 mt-0 mb-0" src="https://www.cge.ce.gov.br/wp-content/uploads/sites/20/2021/05/Controladoria-e-Ouvidoria-Geral-do-Estado-INVERTIDA-WEB-BRANCA-MENORZINHA.png" alt="Controladoria e Ouvidoria Geral do Estado- INVERTIDA &#8211; WEB &#8211; BRANCA- MENORZINHA">
+                                                                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+
+
+<section class="BgCinza2 turismo-type">
+    <div class="wrapper container">
+
+
+        <div class="">
+                        <p><img loading="lazy" class="rounded mx-auto d-block" src="TemplateData/Logo.png" alt="" width="600" height="128" /></p>
+<div class="Card Informativo BgBranco row">
+<h4 class="-laranja m-2"><strong>Já pensou em governar o Estado do Ceará?</strong></h4>
+<p class="m-2">Nesse simulador, desenvolvido no Hackathon da Inteligência Cidadã, você irá gerir os contratos do Governo do Estado do Ceará durante a pandemia do Covid-19, atendendo as diversas demandas da sociedades utilizando dados de contratos reais do governo!!<br> E ai, aceita essa desafio?</p>
+</div>
+
+            </div>
+	
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-success btg-lg rounded mx-auto d-none d-sm-block" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="static" data-keyboard="false">
+  Jogar
+</button>
+
+<a href="Game.html">
+<button type="btn btn-success btg-lg rounded mx-auto" class="btn btn-primary d-block d-sm-none">
+  Jogar.
+</button>
+</a>
+
+<div class="modal fade bd-example-modal-xl" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<a href="Game.html"> <button class="buttonFecha" type="button" data-dismiss="modal" src="Game.html"><img src="TemplateData/Fechar.png"></button></a>
+<a href="Game.html"> <button class="buttonMax" type="button" src="Game.html"><img src="TemplateData/enlargemin.png"></button></a>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        			<iframe id="myiFrame" class="embed-responsive-item" frameborder="0" src="Game.html" allowfullscreen="" width="960" height="620"></iframe>
+					
+					
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+            </div>
+</section>
+
+
+﻿</main>
+
+<footer>
+    <div class="wrapper"> 
+                        <div class="row Infos" style="border-top:none;">
+
+                    <div class="dt-2 NomeSite">
+                        <a class="link-gov" href="http://WWW.CGE.CE.GOV.BR">
+                            <h2>CGE.CE.GOV.BR</h2>
+                        </a>
+                    </div>
+
+                    <div class="dt-10 Direitos">
+                        <div>
+                            <div class="textwidget">
+                                                                    <div class="box"><h2>Sede da Controladoria e Ouvidoria Geral do Estado</h2>
+<p>
+  Av. Gal Afonso Albuquerque Lima <br> Edifício SEPLAG - 2ºAndar <br> Cambeba -
+  Fortaleza, CE<br>
+  Telefone: 3101 3471<br>
+  CEP: 60.822-325 
+</p></div>
+                                    <div class="box"><h2>Horário de Atendimento</h2>
+<p>08 às 17 horas</p></div>
+                                
+                                <div class="box">
+                                    <h2 class="canais">Nossos canais</h2>
+                                    <div class="redes">
+                                        <ul class="menu">
+                                                                                            <li class="facebook redesLinkRodape">
+                                                    <a href="https://www.facebook.com/cgeceara/" style="overflow: hidden;" target="_blank">Facebook</a>
+                                                </li>
+                                                                                                                                        <li class="instagram redesLinkRodape">
+                                                    <a href="https://www.instagram.com/cgeceara/" style="overflow: hidden;" target="_blank">Instagram</a>
+                                                </li>
+                                                                                                                                        <li class="twitter redesLinkRodape">
+                                                    <a href="https://twitter.com/cgeceara" style="overflow: hidden;" target="_blank">Twitter</a>
+                                                </li>
+                                                                                                                                        <li class="youtube redesLinkRodape">
+                                                    <a href="https://www.youtube.com/channel/UCzBrWrD7mb0rK5O9zLVOZjA" style="overflow: hidden;" target="_blank">Youtube</a>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            
+                                <div class="box copyright">
+                                    <p>
+                                        © 2017 - 2021 – governo do estado do ceará<br>
+                                        todos os direitos reservados
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <div class="embed-responsive embed-responsive-16by9">
-                <!--<iframe src="https://i.simmer.io/@yuri_mhb/hackathon-inteligencia-cidada" style="width:960px;height:600px;border:0"></iframe>-->
-                <iframe id="myiFrame" frameborder="0" src="Game.html" allowfullscreen="" width="960" height="620"></iframe>
-				<a href="Game.html"> <button type="button" src="Game.html"><img src="TemplateData/enlargemin.png"></button></a>
+                </div>
             </div>
+</footer>
+
+<div class="Overlay"></div>
+
+
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.cge.ce.gov.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/cc-bootstrap/js/cc-bootstrap.min.js?ver=4.4.1' id='cc-bootstrap-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/js/main.js?ver=5.5.6' id='main-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/plugins/conta-clique/contador.php?post-id=81847&#038;ver=2156' id='contaclique-js'></script>
+<script type='text/javascript' id='solr_post_functions_js-js-extra'>
+/* <![CDATA[ */
+var solrInformation = {"solrPath":"http:\/\/www.ceara.gov.br\/solr\/ceara","parameterSearch":"","postsPerPage":"10","order":"0","stopwords":["do","da","de","dos","das","um","uma","uns","umas","por","para","pelo","pela"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/plugins/solrpost/js/functions.js?ver=9430' id='solr_post_functions_js-js'></script>
+<script type='text/javascript' id='thickbox-js-extra'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Pr\u00f3ximo \u00bb","prev":"\u00ab Anterior","image":"Imagem","of":"de","close":"Fechar","noiframes":"Este recurso necessita frames em linha. Os iframes est\u00e3o desativados por voc\u00ea ou seu navegador n\u00e3o os suporta.","loadingAnimation":"https:\/\/www.cge.ce.gov.br\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105' id='thickbox-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/Keyboard-master/js/jquery.keyboard.js?1563284676&#038;ver=1563284676' id='keyboard_js-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/Keyboard-master/js/jquery.keyboard.extension-typing.js?1563284675&#038;ver=1563284675' id='keyboard_extension_js-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/js/slick.min.js?1563284671&#038;ver=1563284671' id='slick_js-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/popper/dist/umd/popper.min.js?1563286344&#038;ver=1563286344' id='popper-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/libs/tippy/tippy.all.min.js?1563285269&#038;ver=1563285269' id='tippy-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-content/themes/ceara2017/assets/js/scripts.js?1636916589&#038;ver=1636916589' id='scripts_js-js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js?ver=5.5.6' id='ceara_select2_site_script-js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/pt-BR.js?ver=5.5.6' id='ceara_select2_pt_site_script-js'></script>
+<script type='text/javascript' src='https://www.cge.ce.gov.br/wp-includes/js/wp-embed.js?ver=5.5.6' id='wp-embed-js'></script>
+
+
 
 </body>
 </html>
+
+<script>
+$('a').on( "click", function() {
+   $('#myModal').modal('show');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
